@@ -3,7 +3,17 @@
 @section('title', 'CREAR')
 
 @section('content')
-    @include('posts.partials.form')
+
+    {{-- <form method="POST" action="{{ route('posts.store') }}">
+
+        @csrf --}}
+
+        @include('posts.partials.form')
+
+        {{-- <button type="submit" class="btn btn-primary">Crear post</button>
+
+    </form> --}}
+
 @endsection
 
 @section('scripts')

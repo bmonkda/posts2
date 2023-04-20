@@ -36,7 +36,9 @@
             <select name="subcategoria" id="subcategoria" {{ $post->categoria_id ? '' : 'disabled' }}>
                 <option value="">Seleccione una subcategoría</option>
                 @foreach ($subcategorias as $subcategoria)
-                    <option value="{{ $subcategoria->id }}" {{ old('subcategoria', $post->subcategoria_id) == $subcategoria->id ? 'selected' : '' }}>{{ $subcategoria->nombre }}</option>
+                    <option value="{{ $subcategoria->id }}" {{ old('subcategoria', $post->subcategoria_id) == $subcategoria->id ? 'selected' : '' }}>
+                        {{ $subcategoria->nombre }}
+                    </option>
                 @endforeach
             </select>
         </div>
