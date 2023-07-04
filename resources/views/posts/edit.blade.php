@@ -33,7 +33,7 @@
 
         <div class="form-group">
             <label for="subcategoria">Subcategoría</label>
-            <select name="subcategoria" id="subcategoria" {{ $post->categoria_id ? '' : 'disabled' }}>
+            <select class="form-control" name="subcategoria" id="subcategoria" {{ $post->categoria_id ? '' : 'disabled' }}>
                 <option value="">Seleccione una subcategoría</option>
                 @foreach ($subcategorias as $subcategoria)
                     <option value="{{ $subcategoria->id }}" {{ old('subcategoria', $post->subcategoria_id) == $subcategoria->id ? 'selected' : '' }}>{{ $subcategoria->nombre }}</option>
